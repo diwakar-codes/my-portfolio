@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diwakar Singh | Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            scroll-behavior: smooth;
+        }
+        .apple-gradient {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #000;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .contact-input {
+            border-bottom: 1px solid #d1d5db;
+            transition: all 0.3s ease;
+        }
+        .contact-input:focus {
+            border-bottom-color: #000;
+            outline: none;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+        <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-semibold">Diwakar Singh</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#blogs" class="nav-link">Blogs</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="md:hidden">
+                <i data-feather="menu"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center apple-gradient">
+        <div class="max-w-6xl mx-auto px-6 py-20 text-center" data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Diwakar Singh</h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Computer Science student passionate about uncovering insights through Data Visualization, Pandas, NumPy, and Python.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#projects" class="px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors">View Projects</a>
+                <a href="#contact" class="px-6 py-3 border border-black rounded-full hover:bg-gray-50 transition-colors">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">Skills & Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="skill-card p-6 rounded-xl border border-gray-100 shadow-sm transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <i data-feather="code" class="w-10 h-10 text-gray-700 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Programming</h3>
+                    <p class="text-gray-600">Python, Java, MySQL, PostgreSQL, MongoDB</p>
+                </div>
+                <div class="skill-card p-6 rounded-xl border border-gray-100 shadow-sm transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <i data-feather="bar-chart-2" class="w-10 h-10 text-gray-700 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Data Science</h3>
+                    <p class="text-gray-600">Statistics, Data Visualization, Machine Learning, NLP</p>
+                </div>
+                <div class="skill-card p-6 rounded-xl border border-gray-100 shadow-sm transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <i data-feather="layers" class="w-10 h-10 text-gray-700 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Frameworks</h3>
+                    <p class="text-gray-600">Pandas, NumPy, Matplotlib, Power BI, StreamLit</p>
+                </div>
+                <div class="skill-card p-6 rounded-xl border border-gray-100 shadow-sm transition-all" data-aos="fade-up" data-aos-delay="400">
+                    <i data-feather="smartphone" class="w-10 h-10 text-gray-700 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">App Development</h3>
+                    <p class="text-gray-600">Android (Java), iOS (Swift)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card bg-white rounded-xl overflow-hidden border border-gray-100 shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <img src="http://static.photos/technology/640x360/1" alt="AI Quiz Generator" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">AI Powered Quiz Generator</h3>
+                        <p class="text-gray-600 mb-4">Generated quizzes from PDFs using AI and NLP techniques with performance analytics.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">NLP</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">StreamLit</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-sm font-medium hover:underline">GitHub</a>
+                            <a href="#" class="text-sm font-medium hover:underline">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white rounded-xl overflow-hidden border border-gray-100 shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <img src="http://static.photos/education/640x360/2" alt="Hand-Sign Learning App" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Hand-Sign Learning Application</h3>
+                        <p class="text-gray-600 mb-4">Android app to learn hand-signs practically with text translation and video tutorials.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Java</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Android</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">TensorFlow</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-sm font-medium hover:underline">GitHub</a>
+                            <a href="#" class="text-sm font-medium hover:underline">Play Store</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white rounded-xl overflow-hidden border border-gray-100 shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <img src="http://static.photos/retail/640x360/3" alt="Ecommerce Website" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Ecommerce Website</h3>
+                        <p class="text-gray-600 mb-4">User-friendly web application for seamless and intuitive online shopping experience.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">HTML/CSS</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">PHP</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-sm font-medium hover:underline">GitHub</a>
+                            <a href="#" class="text-sm font-medium hover:underline">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">Education</h2>
+            <div class="space-y-8">
+                <div class="p-6 border-l-4 border-gray-200 pl-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">Master of Computer Application</h3>
+                        <span class="text-gray-500">2024 – 2026</span>
+                    </div>
+                    <p class="text-gray-600 mb-1">MGM University • Jawaharlal Nehru Engineering College</p>
+                    <p class="text-gray-500">Chh.Sambhajinagar, India • SGPA: 8.30 (2nd Semester)</p>
+                </div>
+                <div class="p-6 border-l-4 border-gray-200 pl-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">Bachelor of Computer Application</h3>
+                        <span class="text-gray-500">2021 – 2024</span>
+                    </div>
+                    <p class="text-gray-600 mb-1">BAMU University • Hi-tech College of Management & Computer Science</p>
+                    <p class="text-gray-500">Chh.Sambhajinagar, India • CGPA: 7.05</p>
+                </div>
+                <div class="p-6 border-l-4 border-gray-200 pl-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">HSC</h3>
+                        <span class="text-gray-500">2019 – 2021</span>
+                    </div>
+                    <p class="text-gray-600 mb-1">U.P State Board • Saraswati Intermediate College</p>
+                    <p class="text-gray-500">Prayagraj, India • Percentage: 72% (PCM)</p>
+                </div>
+                <div class="p-6 border-l-4 border-gray-200 pl-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">SSC</h3>
+                        <span class="text-gray-500">2019</span>
+                    </div>
+                    <p class="text-gray-600 mb-1">M.H. State Board • Eureka Infosys School</p>
+                    <p class="text-gray-500">Chh.Sambhajinagar, India • Percentage: 77%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section id="blogs" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">Latest Blogs</h2>
+            <div class="space-y-6" id="blog-container">
+                <div class="text-center py-10" data-aos="fade-up">
+                    <i data-feather="rss" class="w-12 h-12 text-gray-400 mx-auto mb-4"></i>
+                    <p class="text-gray-500">Loading latest posts from LinkedIn...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">About Me</h2>
+            <div class="prose prose-lg max-w-none" data-aos="fade-up">
+                <p class="text-gray-700 mb-6">
+                    I'm a Computer Science student with a passion for transforming complex data into actionable insights. 
+                    My journey in technology began with a curiosity about how data can tell stories and reveal patterns 
+                    that drive decision-making.
+                </p>
+                <p class="text-gray-700 mb-6">
+                    My expertise spans across data visualization, machine learning, and full-stack development, with 
+                    particular interest in Python ecosystem tools like Pandas, NumPy, and modern AI frameworks. I'm 
+                    continuously exploring the intersection of data science and practical application development.
+                </p>
+                <p class="text-gray-700 mb-6">
+                    Beyond technical skills, I believe in the power of collaboration, clear communication, and 
+                    continuous learning. My goal is to evolve into a proficient Data Scientist who can bridge the 
+                    gap between technical complexity and business value.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+                    <div class="text-center p-4 border rounded-lg">
+                        <i data-feather="award" class="w-8 h-8 text-gray-700 mx-auto mb-2"></i>
+                        <p class="text-sm text-gray-600">Certified iOS Developer</p>
+                    </div>
+                    <div class="text-center p-4 border rounded-lg">
+                        <i data-feather="shield" class="w-8 h-8 text-gray-700 mx-auto mb-2"></i>
+                        <p class="text-sm text-gray-600">Cybersecurity Certified</p>
+                    </div>
+                    <div class="text-center p-4 border rounded-lg">
+                        <i data-feather="bar-chart-2" class="w-8 h-8 text-gray-700 mx-auto mb-2"></i>
+                        <p class="text-sm text-gray-600">Data Science Stats</p>
+                    </div>
+                    <div class="text-center p-4 border rounded-lg">
+                        <i data-feather="cloud" class="w-8 h-8 text-gray-700 mx-auto mb-2"></i>
+                        <p class="text-sm text-gray-600">AWS Fundamentals</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">Get In Touch</h2>
+            <form class="space-y-6 max-w-lg mx-auto" data-aos="fade-up">
+                <div>
+                    <input type="email" placeholder="Your Email" class="contact-input w-full px-4 py-3 bg-transparent" required>
+                </div>
+                <div>
+                    <textarea placeholder="Your Message" rows="5" class="contact-input w-full px-4 py-3 bg-transparent" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition-colors">
+                    Send Message
+                </button>
+            </form>
+            <div class="mt-16 text-center" data-aos="fade-up">
+                <p class="text-gray-600 mb-4">Or reach out directly:</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-8">
+                    <a href="tel:+919125316220" class="flex items-center text-gray-700 hover:text-black">
+                        <i data-feather="phone" class="w-5 h-5 mr-2"></i>
+                        +91-9125316220
+                    </a>
+                    <a href="mailto:rajputdiwakar2002@gmail.com" class="flex items-center text-gray-700 hover:text-black">
+                        <i data-feather="mail" class="w-5 h-5 mr-2"></i>
+                        rajputdiwakar2002@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Diwakar Singh</h3>
+                    <p class="text-gray-600">Transforming data into actionable insights through technology.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-600 hover:text-black">Home</a></li>
+                        <li><a href="#skills" class="text-gray-600 hover:text-black">Skills</a></li>
+                        <li><a href="#projects" class="text-gray-600 hover:text-black">Projects</a></li>
+                        <li><a href="#education" class="text-gray-600 hover:text-black">Education</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#blogs" class="text-gray-600 hover:text-black">Blogs</a></li>
+                        <li><a href="#about" class="text-gray-600 hover:text-black">About</a></li>
+                        <li><a href="#contact" class="text-gray-600 hover:text-black">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Social</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/diwakar-codes" class="text-gray-600 hover:text-black">
+                            <i data-feather="github" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/diwakar-codes" class="text-gray-600 hover:text-black">
+                            <i data-feather="linkedin" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-100 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2024 Diwakar Singh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-quart'
+        });
+
+        // Initialize feather icons
+        feather.replace();
+
+        // Simple form submission (would be connected to email service in production)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! In a production environment, this would be sent to my email.');
+            this.reset();
+        });
+
+        // Mobile menu toggle
+        document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+            const nav = document.querySelector('.hidden.md\\:flex');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('absolute');
+            nav.classList.toggle('top-full');
+            nav.classList.toggle('left-0');
+            nav.classList.toggle('right-0');
+            nav.classList.toggle('bg-white');
+            nav.classList.toggle('p-6');
+            nav.classList.toggle('space-y-4');
+            nav.classList.toggle('border-t');
+            nav.classList.toggle('border-gray-100');
+        });
+
+        // LinkedIn API integration placeholder
+        // This would be implemented with proper API credentials
+        /*
+        async function fetchLinkedInPosts() {
+            try {
+                const response = await fetch('LINKEDIN_API_ENDPOINT');
+                const posts = await response.json();
+                displayPosts(posts);
+            } catch (error) {
+                document.getElementById('blog-container').innerHTML = `
+                    <div class="text-center py-10">
+                        <i data-feather="wifi-off" class="w-12 h-12 text-gray-400 mx-auto mb-4"></i>
+                        <p class="text-gray-500">Unable to load posts at this time.</p>
+                    </div>
+                `;
+                feather.replace();
+            }
+        }
+        */
+    </script>
+</body>
+</html>
